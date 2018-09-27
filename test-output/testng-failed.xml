@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]">
+  <parameter name="appURL" value="http://automationpractice.com/index.php"/>
+  <parameter name="browserType" value="chrome"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="3" name="ApplicationTest(failed)">
+    <parameter name="searchKey" value="UK"/>
+    <classes>
+      <class name="TestSuites.SmokeTest">
+        <methods>
+          <include name="initializeTestBaseSetup" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- TestSuites.SmokeTest -->
+    </classes>
+  </test> <!-- ApplicationTest(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

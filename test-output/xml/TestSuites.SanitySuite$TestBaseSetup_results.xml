@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ApplicationTest"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="33.903">
+  <properties />
+  
+  
+            <testcase name="initializeTestBaseSetup" time="33.903" classname="TestSuites.SanitySuite$TestBaseSetup" />
+      
+</testsuite>

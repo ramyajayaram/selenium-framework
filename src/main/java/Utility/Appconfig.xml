@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite" thread-count="3" >
+<listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+<parameter name="browserType" value="chrome" />
+<parameter name="appURL" value="http://automationpractice.com/index.php" />
+<test name="ApplicationTest">
+<parameter name="searchKey" value="UK" />
+<classes>
+<class name="TestSuites.SmokeTest"/>
+
+</classes>
+</test>
+</suite>
