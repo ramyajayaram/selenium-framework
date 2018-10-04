@@ -124,7 +124,7 @@ public class LoginPage {
 	}
 
 	public void loginFailed() {
-
+       
 	}
 
 	public void forgotPassword() {

@@ -53,7 +53,7 @@ public class SmokeTest {
 
 	
 		@Parameters({ "browserType", "appURL" })
-		@Test
+		@Test(priority=1)
 		public void initializeTestBaseSetup(String browserType, String appURL)  {
 			try {
 				setDriver(browserType, appURL);
@@ -71,10 +71,12 @@ public class SmokeTest {
 		}
 		
 		
-		@Test
+		@Test(priority=2)
 		public void createAccount()
 		{
-			
+		     
+			CreateAccountPage objcreateAnAccount=new CreateAccountPage();
+			objcreateAnAccount.createAnAccount();
 		
 		}
 }

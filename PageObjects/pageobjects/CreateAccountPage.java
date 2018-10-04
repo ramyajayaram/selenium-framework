@@ -28,6 +28,78 @@ public class CreateAccountPage {
 	@FindBy(xpath = "//button[@id='SubmitCreate']//span")
 	private WebElement CreateAccountBtn;
 	
+	@FindBy(xpath = "//input[@id='id_gender1']")
+	private WebElement Mr_radioBtn;
+	
+	
+	@FindBy(xpath = "//input[@id='id_gender2']")
+	private WebElement Mrs_radioBtn;
+	
+		
+	@FindBy(xpath = "//input[@id='customer_firstname']")
+	private WebElement FirstNameTxtBox;
+	
+	@FindBy(xpath = "//input[@id='customer_firstname']")
+	private WebElement LastNameTxtBox;
+	
+	
+	@FindBy(xpath = "//input[@id='email']")
+	private WebElement EmailTxtBox;
+	
+	
+	@FindBy(xpath = "//input[@id='passwd']")
+	private WebElement PasswordTxtBox;
+	
+	@FindBy(id = "days")
+	private WebElement DaysDropDown;
+	
+	
+	
+	@FindBy(xpath = "//select[@id='months']")
+	private WebElement MonthsDropDown;
+	
+	@FindBy(xpath = "//select[@id='years']")
+	private WebElement YearDropDown;
+	
+	@FindBy(xpath = "//input[@id='firstname']")
+	private WebElement FirstNameTextBox;
+	
+	@FindBy(xpath = "//input[@id='lastname']")
+	private WebElement lastnameTxtBox;
+	
+	@FindBy(xpath = "//input[@id='address1']")
+	private WebElement Address1TxtBox;
+	
+	
+	@FindBy(xpath = "//input[@id='address2']]")
+	private WebElement Address2TxtBox;
+	
+	@FindBy(xpath = "//input[@id='city']")
+	private WebElement cityTxtBox;
+	
+	
+	@FindBy(xpath = "//select[@id='id_state']")
+	private WebElement stateDropdown;
+	
+	
+	
+	@FindBy(xpath = "//input[@id='postcode']")
+	private WebElement PostalCodeTxtBox;
+	
+	@FindBy(xpath = "//select[@id='id_country']")
+	private WebElement CountryDropdown;
+	
+	@FindBy(xpath = "//input[@id='phone']")
+	private WebElement HomePhoneTxtBox;
+	
+	@FindBy(xpath = "//input[@id='phone_mobile']")
+	private WebElement MobilePhoneTxtBox;
+	
+	
+	@FindBy(xpath = "//button[@id='submitAccount']//span")
+	private WebElement RegisterButton;
+	
+	
 	
 	public void CreateAccount() 
 	{
@@ -45,7 +117,7 @@ public class CreateAccountPage {
 	
 	public  void  createAnAccount()
 	{
-		
+		Mrs_radioBtn.click();
 	}
 	
 
