@@ -22,53 +22,6 @@ import org.testng.Assert;
 
 import Utility.PropertyCollection;
 
-class ExcelTest {
-	public FileInputStream fis = null;
-	public XSSFWorkbook workbook = null;
-	public XSSFSheet sheet = null;
-	public XSSFRow row = null;
-	public XSSFCell cell = null;
-
-	public ExcelTest(String xlFilePath) throws Exception {
-		fis = new FileInputStream(xlFilePath);
-		workbook = new XSSFWorkbook(fis);
-		fis.close();
-	}
-
-	public String getCellData(String sheetName, String colName, int rowNum) {
-		int col_Num = -1;
-		try {
-
-			sheet = workbook.getSheet(sheetName);
-			row = sheet.getRow(0);
-			for (int i = 0; i < row.getLastCellNum(); i++) {
-				if (row.getCell(i).getStringCellValue().trim().equals(colName.trim()))
-					col_Num = i;
-			}
-
-			row = sheet.getRow(rowNum - 1);
-			cell = row.getCell(col_Num);
-
-			if (cell.getCellTypeEnum() == CellType.STRING)
-				return cell.getStringCellValue();
-			else if (cell.getCellTypeEnum() == CellType.NUMERIC || cell.getCellTypeEnum() == CellType.FORMULA) {
-				String cellValue = String.valueOf(cell.getNumericCellValue());
-				if (HSSFDateUtil.isCellDateFormatted(cell)) {
-					DateFormat df = new SimpleDateFormat("dd/MM/yy");
-					Date date = cell.getDateCellValue();
-					cellValue = df.format(date);
-				}
-				return cellValue;
-			} else if (cell.getCellTypeEnum() == CellType.BLANK)
-				return "";
-			else
-				return String.valueOf(cell.getBooleanCellValue());
-		} catch (Exception e) {
-			e.printStackTrace();
-			return "row " + rowNum + " or column " + col_Num + " does not exist  in Excel";
-		}
-	}
-}
 
 public class LoginPage {
 	public LoginPage() {
@@ -102,15 +55,7 @@ public class LoginPage {
 
 		PropertyCollection.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		ExcelTest objExcelData = null;
-		try {
-			objExcelData = new ExcelTest("C:\\Users\\Ramya\\Downloads\\Login.xlsx");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		Email = objExcelData.getCellData("Sheet1", "Email", 2);
-		Password = objExcelData.getCellData("Sheet1", "Password", 2);
+		
 		signinMenu.click();
 		Assert.assertEquals(PropertyCollection.getPageTitle(Logintitle), LoginTitle);
 		System.out.println("Login successfully....");

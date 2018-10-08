@@ -35,7 +35,11 @@ public class PropertyCollection {
 	}
 	
 	
-
+ public static void scrollVerticallyDown()
+ {
+	 JavascriptExecutor jse = (JavascriptExecutor) PropertyCollection.driver;
+		jse.executeScript("window.scrollBy(0,250)", "");
+ }
 
 	public static void ScrollByVisibleElement(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
