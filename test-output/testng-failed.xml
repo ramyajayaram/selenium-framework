@@ -12,7 +12,7 @@
     <classes>
       <class name="TestSuites.SmokeTest">
         <methods>
-          <include name="initializeTestBaseSetup" invocation-numbers="0"/>
+          <include name="createAccount"/>
         </methods>
       </class> <!-- TestSuites.SmokeTest -->
     </classes>

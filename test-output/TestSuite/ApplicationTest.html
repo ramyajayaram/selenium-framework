@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 27 18:43:30 IST 2018</td>
+<td>Started on:</td><td>Mon Oct 08 16:49:04 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>50 seconds (50566 ms)</td>
+<tr><td>Total time:</td><td>37 seconds (37684 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,20 +75,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestSuites.SmokeTest.initializeTestBaseSetup()'><b>initializeTestBaseSetup</b><br>Test class: TestSuites.SmokeTest<br>Parameters: chrome, http://automationpractice.com/index.php</td>
-<td><div><pre>java.lang.AssertionError: expected [http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation] but found [http://automationpractice.com/index.php?controller=authentication&amp;back=my-account]
-	at pageobjects.CreateAccountPage.CreateAccount(CreateAccountPage.java:41)
-	at TestSuites.SmokeTest.initializeTestBaseSetup(SmokeTest.java:63)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2121995675", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2121995675'><pre>java.lang.AssertionError: expected [http://automationpractice.com/index.php?controller=authentication&amp;back=my-account#account-creation] but found [http://automationpractice.com/index.php?controller=authentication&amp;back=my-account]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at pageobjects.CreateAccountPage.CreateAccount(CreateAccountPage.java:41)
-	at TestSuites.SmokeTest.initializeTestBaseSetup(SmokeTest.java:63)
+<td title='TestSuites.SmokeTest.createAccount()'><b>createAccount</b><br>Test class: TestSuites.SmokeTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Country
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;ADMIN-PC&apos;, ip: &apos;10.0.0.22&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
+	at pageobjects.CreateAccountPage.createAnAccount(CreateAccountPage.java:122)
+	at TestSuites.SmokeTest.createAccount(SmokeTest.java:77)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace977160959", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace977160959'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Country
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;ADMIN-PC&apos;, ip: &apos;10.0.0.22&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
+	at pageobjects.CreateAccountPage.createAnAccount(CreateAccountPage.java:122)
+	at TestSuites.SmokeTest.createAccount(SmokeTest.java:77)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -115,7 +119,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>50</td>
+<td>12</td>
 <td>TestSuites.SmokeTest@7c29daf3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -126,9 +130,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestSuites.SmokeTest.createAccount()'><b>createAccount</b><br>Test class: TestSuites.SmokeTest</td>
+<td title='TestSuites.SmokeTest.initializeTestBaseSetup()'><b>initializeTestBaseSetup</b><br>Test class: TestSuites.SmokeTest<br>Parameters: chrome, http://automationpractice.com/index.php</td>
 <td></td>
-<td>0</td>
+<td>24</td>
 <td>TestSuites.SmokeTest@7c29daf3</td></tr>
 </table><p>
 </body>
