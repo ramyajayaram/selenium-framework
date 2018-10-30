@@ -35,6 +35,15 @@ public class PropertyCollection {
 	}
 	
 	
+	public static String getText(WebElement Element )
+	{
+		
+	    Element.getText();
+		return Element.getText();
+		
+	}
+	
+	
  public static void scrollVerticallyDown()
  {
 	 JavascriptExecutor jse = (JavascriptExecutor) PropertyCollection.driver;

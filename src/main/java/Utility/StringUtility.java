@@ -4,7 +4,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 public class  StringUtility {
 	
 	public static String Email() {
-		 String Email = RandomStringUtils.randomAlphanumeric(17).toUpperCase();
+		 String Email = RandomStringUtils.randomAlphanumeric(17).toLowerCase();
 		 return Email.concat("@gmail.com");
 
 	}
@@ -15,5 +15,13 @@ public class  StringUtility {
 		 return Password;
 
 	}
+	public static String  PhoneNumber()
+	{
+		long number=Math.round(Math.random()*1000000);
+		String numberAsString = Long.toString(number);
+		return numberAsString;
+		
+	}
+	
 
 }

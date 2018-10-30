@@ -12,7 +12,7 @@
 <body>
 <h1>ApplicationTest</h1>
 <p>
-  Test duration: 37.648s
+  Test duration: 80.675s
 </p>
 
 
@@ -25,25 +25,26 @@
             
 <tr>
   <td class="method">
-                  createAccount
+                  Search
       </td>
   <td class="duration">
-    12.942s
+    18.678s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Country<br/>
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;<br/>
-System info: host: &apos;ADMIN-PC&apos;, ip: &apos;10.0.0.22&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;<br/>
-Driver info: driver.version: unknown</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [Product successfully added to your shopping cart] but found []</b></a><br />
     <div class="stackTrace" id="exception-0">
-              org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)<br />
-              pageobjects.CreateAccountPage.createAnAccount(CreateAccountPage.java:122)<br />
-              TestSuites.SmokeTest.createAccount(SmokeTest.java:77)<br />
+              org.testng.Assert.fail(Assert.java:96)<br />
+              org.testng.Assert.failNotEquals(Assert.java:776)<br />
+              org.testng.Assert.assertEqualsImpl(Assert.java:137)<br />
+              org.testng.Assert.assertEquals(Assert.java:118)<br />
+              org.testng.Assert.assertEquals(Assert.java:453)<br />
+              org.testng.Assert.assertEquals(Assert.java:463)<br />
+              pageobjects.Search.addToCart(Search.java:72)<br />
+              TestSuites.SmokeTest.Search(SmokeTest.java:87)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
@@ -83,10 +84,24 @@ Driver info: driver.version: unknown</b></a><br />
             
 <tr>
   <td class="method">
+                  createAccount
+      </td>
+  <td class="duration">
+    8.056s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
                   initializeTestBaseSetup
       </td>
   <td class="duration">
-    24.706s
+    53.941s
   </td>
   <td class="result">
         

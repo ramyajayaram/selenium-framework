@@ -7,7 +7,7 @@ public class SearchDataSet {
 	
 	
 	
-	public  static String Blouse;
+	public  static String WomensWear="Blouse";
 	 
 	 
 	 

@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import Utility.PropertyCollection;
 import pageobjects.LoginPage;
+import pageobjects.Search;
 
 
 
@@ -76,6 +77,13 @@ public class SanitySuite {
 		}
 
 	
+		@Test
+		public void  TC02_Search()
+		{
+			Search objSearch=new Search();
+			objSearch.SearchItem();
+		}
+		
 		
 		
 		

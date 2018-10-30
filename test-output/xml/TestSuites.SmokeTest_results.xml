@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="ApplicationTest"
-           tests="2"
+           tests="3"
            failures="1"
            errors="0"
            skipped="0"
-           time="37.648">
+           time="80.675">
   <properties />
-            <testcase name="createAccount" time="12.942" classname="TestSuites.SmokeTest">
-                <failure type="org.openqa.selenium.NoSuchElementException"
-                  message="Cannot locate element with text: Country
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;ADMIN-PC&apos;, ip: &apos;10.0.0.22&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;
-Driver info: driver.version: unknown"
+            <testcase name="Search" time="18.678" classname="TestSuites.SmokeTest">
+                <failure type="java.lang.AssertionError"
+                  message="expected [Product successfully added to your shopping cart] but found []"
               >
-<![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Country
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'ADMIN-PC', ip: '10.0.0.22', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
-Driver info: driver.version: unknown
-  org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
-  pageobjects.CreateAccountPage.createAnAccount(CreateAccountPage.java:122)
-  TestSuites.SmokeTest.createAccount(SmokeTest.java:77)
+<![CDATA[java.lang.AssertionError: expected [Product successfully added to your shopping cart] but found []
+  org.testng.Assert.fail(Assert.java:96)
+  org.testng.Assert.failNotEquals(Assert.java:776)
+  org.testng.Assert.assertEqualsImpl(Assert.java:137)
+  org.testng.Assert.assertEquals(Assert.java:118)
+  org.testng.Assert.assertEquals(Assert.java:453)
+  org.testng.Assert.assertEquals(Assert.java:463)
+  pageobjects.Search.addToCart(Search.java:72)
+  TestSuites.SmokeTest.Search(SmokeTest.java:87)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -53,6 +50,7 @@ Driver info: driver.version: unknown
           </testcase>
   
   
-            <testcase name="initializeTestBaseSetup" time="24.706" classname="TestSuites.SmokeTest" />
+            <testcase name="createAccount" time="8.056" classname="TestSuites.SmokeTest" />
+                <testcase name="initializeTestBaseSetup" time="53.941" classname="TestSuites.SmokeTest" />
       
 </testsuite>

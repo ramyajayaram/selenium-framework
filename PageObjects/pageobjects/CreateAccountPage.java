@@ -12,9 +12,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import Utility.EndPoints;
+
 import Utility.PropertyCollection;
 import Utility.StringUtility;
+import dataset.EndPoints;
 import excelLib.ExcelLibrary;
 import exception.ValidationException;
 
@@ -40,11 +41,13 @@ public class CreateAccountPage {
 	@FindBy(xpath = "//input[@id='customer_firstname']")
 	private WebElement FirstNameTxtBox;
 
-	@FindBy(xpath = "//input[@id='customer_firstname']")
+	@FindBy(xpath = "//input[@id='customer_lastname']")
 	private WebElement LastNameTxtBox;
    
 	@FindBy(xpath = "//input[@id='company']")
 	private WebElement CompanyTxtBox;
+	
+	
 	
 	
 	@FindBy(xpath = "//input[@id='email']")
@@ -111,17 +114,27 @@ public class CreateAccountPage {
 		objExcelLibrary = new ExcelLibrary(
 				"C:\\Users\\Ramya\\selenium-Framework\\Ecommerce\\DataSheets\\CreateAccountData.xlsx");
 		Mrs_radioBtn.click();
-		
+		FirstNameTxtBox.sendKeys(objExcelLibrary.getCellData("Sheet1", "FirstName", 2));
+		LastNameTxtBox.sendKeys(objExcelLibrary.getCellData("Sheet1", "Lastname", 2));
+		PasswordTxtBox.sendKeys(StringUtility.Password());
 		FirstNameTextBox.sendKeys(objExcelLibrary.getCellData("Sheet1", "FirstName", 2));
 		lastnameTxtBox.sendKeys(objExcelLibrary.getCellData("Sheet1", "Lastname", 2));
 		PasswordTxtBox.sendKeys(StringUtility.Password());
 		CompanyTxtBox.sendKeys(objExcelLibrary.getCellData("Sheet1", "Company", 2));
 		Address1TxtBox.sendKeys(objExcelLibrary.getCellData("Sheet1", "Address", 2));
 		cityTxtBox.sendKeys(objExcelLibrary.getCellData("Sheet1", "City", 2));
-		Select objSelect =new Select(CountryDropdown);
+		/*Select objSelect =new Select(CountryDropdown);
 		objSelect.selectByVisibleText(objExcelLibrary.getCellData("Sheet1", "Country", 1));
+		Select objSelectStatedropDown =new Select(stateDropdown);
+		objSelectStatedropDown.selectByIndex(2);*/
+		PostalCodeTxtBox.sendKeys("00001");
+		MobilePhoneTxtBox.sendKeys(StringUtility.PhoneNumber());
+		Select objSelectStatedropDown =new Select(stateDropdown);
+		objSelectStatedropDown.selectByIndex(2);
+		RegisterButton.click();
 		
 		
+	
 		
 		
 

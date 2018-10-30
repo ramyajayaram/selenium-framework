@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="TestSuite" duration-ms="37684" started-at="2018-10-08T11:19:04Z" finished-at="2018-10-08T11:19:42Z">
+  <suite name="TestSuite" duration-ms="80754" started-at="2018-10-30T10:56:15Z" finished-at="2018-10-30T10:57:36Z">
     <groups>
     </groups>
-    <test name="ApplicationTest" duration-ms="37684" started-at="2018-10-08T11:19:04Z" finished-at="2018-10-08T11:19:42Z">
+    <test name="ApplicationTest" duration-ms="80754" started-at="2018-10-30T10:56:15Z" finished-at="2018-10-30T10:57:36Z">
       <class name="TestSuites.SmokeTest">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String)[pri:1, instance:TestSuites.SmokeTest@7c29daf3]" name="initializeTestBaseSetup" duration-ms="24706" started-at="2018-10-08T11:19:04Z" finished-at="2018-10-08T11:19:29Z">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String)[pri:1, instance:TestSuites.SmokeTest@7c29daf3]" name="initializeTestBaseSetup" duration-ms="53941" started-at="2018-10-30T10:56:15Z" finished-at="2018-10-30T10:57:09Z">
           <params>
             <param index="0">
               <value>
@@ -23,24 +23,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="FAIL" signature="createAccount()[pri:2, instance:TestSuites.SmokeTest@7c29daf3]" name="createAccount" duration-ms="12942" started-at="2018-10-08T11:19:29Z" finished-at="2018-10-08T11:19:42Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="PASS" signature="createAccount()[pri:2, instance:TestSuites.SmokeTest@7c29daf3]" name="createAccount" duration-ms="8056" started-at="2018-10-30T10:57:09Z" finished-at="2018-10-30T10:57:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAccount -->
+        <test-method status="FAIL" signature="Search()[pri:3, instance:TestSuites.SmokeTest@7c29daf3]" name="Search" duration-ms="18678" started-at="2018-10-30T10:57:17Z" finished-at="2018-10-30T10:57:36Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Cannot locate element with text: Country
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'ADMIN-PC', ip: '10.0.0.22', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
-Driver info: driver.version: unknown]]>
+              <![CDATA[expected [Product successfully added to your shopping cart] but found []]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Country
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'ADMIN-PC', ip: '10.0.0.22', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
-at pageobjects.CreateAccountPage.createAnAccount(CreateAccountPage.java:122)
-at TestSuites.SmokeTest.createAccount(SmokeTest.java:77)
+              <![CDATA[java.lang.AssertionError: expected [Product successfully added to your shopping cart] but found []
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at pageobjects.Search.addToCart(Search.java:72)
+at TestSuites.SmokeTest.Search(SmokeTest.java:87)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -68,10 +69,10 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createAccount -->
+        </test-method> <!-- Search -->
       </class> <!-- TestSuites.SmokeTest -->
     </test> <!-- ApplicationTest -->
   </suite> <!-- TestSuite -->

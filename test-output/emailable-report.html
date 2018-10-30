@@ -9,19 +9,15 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">TestSuite</th></tr>
-<tr><td><a href="#t0">ApplicationTest</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">37,684</td><td></td><td></td></tr>
+<tr><td><a href="#t0">ApplicationTest</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">80,754</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ApplicationTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestSuites.SmokeTest</td><td><a href="#m0">createAccount</a></td><td rowspan="1">1538997569495</td><td rowspan="1">12942</td></tr><tr><th colspan="4">ApplicationTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">TestSuites.SmokeTest</td><td><a href="#m1">initializeTestBaseSetup</a></td><td rowspan="1">1538997544784</td><td rowspan="1">24706</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ApplicationTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestSuites.SmokeTest</td><td><a href="#m0">Search</a></td><td rowspan="1">1540897037443</td><td rowspan="1">18678</td></tr><tr><th colspan="4">ApplicationTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">TestSuites.SmokeTest</td><td><a href="#m1">createAccount</a></td><td rowspan="1">1540897029384</td><td rowspan="1">8056</td></tr><tr class="passedeven"><td><a href="#m2">initializeTestBaseSetup</a></td><td rowspan="1">1540896975440</td><td rowspan="1">53941</td></tr></tbody>
 </table>
-<h2>ApplicationTest</h2><h3 id="m0">TestSuites.SmokeTest#createAccount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Country
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;ADMIN-PC&apos;, ip: &apos;10.0.0.22&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
-	at pageobjects.CreateAccountPage.createAnAccount(CreateAccountPage.java:122)
-	at TestSuites.SmokeTest.createAccount(SmokeTest.java:77)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">TestSuites.SmokeTest#initializeTestBaseSetup</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>chrome</td><td>http://automationpractice.com/index.php</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ApplicationTest</h2><h3 id="m0">TestSuites.SmokeTest#Search</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Product successfully added to your shopping cart] but found []
+	at pageobjects.Search.addToCart(Search.java:72)
+	at TestSuites.SmokeTest.Search(SmokeTest.java:87)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestSuites.SmokeTest#createAccount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">TestSuites.SmokeTest#initializeTestBaseSetup</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>chrome</td><td>http://automationpractice.com/index.php</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
