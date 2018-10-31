@@ -6,11 +6,11 @@
       <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
 <parameter name="browserType" value="chrome" />
-<parameter name="appURL" value="http://automationpractice.com/index.php" />
+<parameter name="appURL" value="http://automationpractice.com/index.php" ></parameter>
 <test name="ApplicationTest">
 <parameter name="searchKey" value="UK" />
 <classes>
-<class name="TestSuites.SmokeTest"/>
+<class name="TestSuite.SmokeTest"/>
 
 </classes>
 </test>

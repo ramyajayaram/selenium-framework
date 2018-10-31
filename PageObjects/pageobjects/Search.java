@@ -36,11 +36,18 @@ public class Search {
 	
 	//div[@class='layer_cart_product col-xs-12 col-md-6']//h2
 	
-	@FindBy(xpath = "//div[@class='layer_cart_product col-xs-12 col-md-6']//h2")
+	@FindBy(xpath = "//div[@class='layer_cart_product col-xs-12 col-md-6']//h2//text()")
 	public WebElement AddToCartSuccessMessage;
 	
+	//a[@title='Proceed to checkout']//span
 	
+	@FindBy(xpath = "//a[@title='Proceed to checkout']//span")
+	public WebElement ProceedToCheckOutButton;
 	
+	//p[@class='cart_navigation clearfix']//span[1]
+	
+	@FindBy(xpath = "//p[@class='cart_navigation clearfix']//span[1]")
+	public WebElement ProceedToCheckOutBtn;
 	
 	public  void SearchItem()
 	{
@@ -55,7 +62,7 @@ public class Search {
 	}
 	
 	
-	public void  addToCart()
+	public void  addToCartAndOrderItem()
 	{
 		PropertyCollection.scrollVerticallyDown();
 		SearchTextBlouse.click();
@@ -66,12 +73,17 @@ public class Search {
 		for (String winHandle :PropertyCollection.driver.getWindowHandles()) {
 			PropertyCollection.driver .switchTo().window(winHandle); // switch focus of WebDriver to the next found window handle (that's your newly opened window)
 		}
-
-		PropertyCollection.getText(AddToCartSuccessMessage);
-		System.out.println(	PropertyCollection.getText(AddToCartSuccessMessage));
-		Assert.assertEquals(PropertyCollection.getText(AddToCartSuccessMessage), "Product successfully added to your shopping cart");
+		PropertyCollection.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		PropertyCollection.scrollVerticallyDown();
+		ProceedToCheckOutButton.click();
+		PropertyCollection.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		PropertyCollection.driver.close(); // close newly opened window when done with it
 		PropertyCollection.driver.switchTo().window(parentHandle);
+		PropertyCollection.driver.close(); 
+		ProceedToCheckOutBtn.click();
+		
+		
+		
 		
 		
 		

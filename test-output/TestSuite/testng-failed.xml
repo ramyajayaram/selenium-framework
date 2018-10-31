@@ -10,11 +10,11 @@
   <test thread-count="3" name="ApplicationTest(failed)">
     <parameter name="searchKey" value="UK"/>
     <classes>
-      <class name="TestSuites.SmokeTest">
+      <class name="TestSuite.SmokeTest">
         <methods>
           <include name="Search"/>
         </methods>
-      </class> <!-- TestSuites.SmokeTest -->
+      </class> <!-- TestSuite.SmokeTest -->
     </classes>
   </test> <!-- ApplicationTest(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->

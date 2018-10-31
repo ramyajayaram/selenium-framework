@@ -1,4 +1,4 @@
-package TestSuites;
+package TestSuite;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,14 +11,7 @@ import pageobjects.CreateAccountPage;
 import pageobjects.LoginPage;
 import pageobjects.Search;
 
-/**
- * @author Ramya
- * This  class is used to initialize the Browsers and  
- * call the page objects Tests for their execution
- *
- */
 public class SmokeTest {
-
 	static final String DRIVER_PATH = "C:\\Users\\Ramya\\eclipse-workspace\\ApplicationTest\\Drivers\\";
 	private static final String String = null;
 
@@ -82,5 +75,4 @@ public class SmokeTest {
 		objSearch.addToCartAndOrderItem();
 
 	}
-
 }
