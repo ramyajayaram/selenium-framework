@@ -70,9 +70,10 @@ public class SmokeTest {
 
 	@Test(priority = 3)
 	public void Search() throws Exception {
-		Search objSearch = new Search();
-		objSearch.SearchItem();
-		objSearch.addToCartAndOrderItem();
+		Search objSarch= new Search();
+		objSarch.SearchItem();
+		objSarch.addToCartAndOrderItem();
+		objSarch.AssertPurchasedItem();
 
 	}
 }

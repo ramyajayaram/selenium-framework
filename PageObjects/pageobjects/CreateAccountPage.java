@@ -132,6 +132,7 @@ public class CreateAccountPage {
 		Select objSelectStatedropDown =new Select(stateDropdown);
 		objSelectStatedropDown.selectByIndex(2);
 		RegisterButton.click();
+		System.out.println("New User Craeted successfully....");
 		
 		
 	

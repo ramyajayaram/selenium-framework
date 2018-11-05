@@ -50,9 +50,10 @@ public class PropertyCollection {
 		jse.executeScript("window.scrollBy(0,300)", "");
  }
 
-	public static void ScrollByVisibleElement(WebElement element) {
+	public static WebElement ScrollByVisibleElement(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", Element);
+		return element;
 		
 		
 	}
